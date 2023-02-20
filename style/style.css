@@ -1,111 +1,144 @@
 html {
-    font-size: 16px;
+font-size: 16px;
 }
 
-@media only screen and (min-width: 600px) {
+/*HEADER SETTINGS*/
+header {
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 64px;
+}
 
-    /*HEADER SETTINGS*/
-    header {
-        position: fixed;
-        display: flex;
-        z-index: 1;
-        justify-content: space-between;
-        align-items: center;
-        background-color: white;
-        width: 100%;
-        height: 64px;
-    }
+.container {
+    position: relative;
+    top: 64px;
+}
 
-    .container {
-        position: relative;
-        top: 64px;
-    }
+header #logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    margin-left: 24px;
+    font-size: 2rem;
+}
 
-    header #logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 32px;
-        margin-left: 24px;
-        font-size: 2rem;
-    }
+header nav {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 24px;
+    font-size: 1.5rem;
+    height: 100%
+}
 
-    header nav {
-        display: inline-flex;
-        align-items: center;
-        margin-right: 24px;
-        font-size: 1.5rem;
-        height: 100%
-    }
+.nav-button {
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.17s ease;
+}
 
-    .nav-button {
-        color: black;
-        text-decoration: none;
-    }
+.nav-button:hover {
+    background-color: lightgray;
+}
 
-    .nav-button:hover {
-        color: grey;
-    }
+header nav .space {
+    width: 16px;
+    height: 100%;
+    background-color: lightgray;
+}
 
-    header nav .space {
-        width: 16px;
-        height: 100%;
-        background-color: lightgray;
-    }
+/*"start" section*/
+.start {
+    display: flex;
+    background-color: lightgrey;
+    height: auto;
+    align-items: center;
+}
 
-    /*"start" section*/
-    .start {
-        display: inline-flex;
-        background-color: lightgrey;
-        height: auto;
-        align-items: center;
-    }
+.start div {
+    width: 30%;
+}
 
-    .start div {
-        width: 30%;
-    }
+.start img{
+    width: 60%;
+    margin: 32px 24px;
+}
 
-    .start img{
-        width: 60%;
-        margin: 32px 24px;
-    }
+.start h1 {
+    font-size: 3rem;
+}
 
-    .start h1 {
-        font-size: 3rem;
-    }
+.start p {
+    font-size: 1.5rem;
+    font-weight: bold;
 
-    .start p {
-        font-size: 1.5rem;
-        font-weight: bold;
+}
 
-    }
+.start div a {
+    font-size: 1.5rem;
+    width: 90%;
+    height: 60px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(52, 50, 50);
+    padding: 8px 30%;
+    margin: 0 auto;
+    transition: background-color 0.17s linear;
+}
 
-    .start div a {
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: white;
-        background-color: rgb(52, 50, 50);
-        padding: 8px 30%;
-    }
+.start div a:hover {
+    color: black;
+    background-color: rgb(161, 157, 157);
+}
 
-    .start div a:hover {
-        color: grey;
-    }
+/*"practice" section*/
+
+.practice .left {
+    width: 60%;
+    margin: 32px 24px;
+}
+
+.practice .left img {
+    width: 100%;
+}
+
+.practice .left h1 {
+    font-size: 3rem;
+    margin: 32px 0 24px 0;
+}
 
 
-    /*footer*/
-    footer {
-        display: inline-flex;
-        width: 100%;
-        height: 64px;
-        justify-content: space-between;
-    }
-    footer p {
-        margin-left: 24px;
-        margin-top: 16px;
-    }
 
-    footer div {
-        margin-top: 16px;
-    }
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+footer {
+    display: inline-flex;
+    width: 100%;
+    height: 64px;
+    justify-content: space-between;
+}
+footer p {
+    margin-left: 24px;
+    margin-top: 16px;
+}
+
+footer div {
+    margin-top: 16px;
 }
