@@ -2,298 +2,322 @@ html {
 font-size: 16px;
 }
 
-/*HEADER SETTINGS*/
-header {
-    position: fixed;
-    display: flex;
-    z-index: 1;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    width: 100%;
-    height: 64px;
+@media only screen and (min-width: 800px) {
+    .mobile {
+        display: none;
+    }
+    /*HEADER SETTINGS*/
+    header {
+        position: fixed;
+        display: flex;
+        z-index: 1;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        width: 100%;
+        height: 64px;
+    }
+
+    .container {
+        position: relative;
+        top: 64px;
+    }
+
+    header #logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        margin-left: 24px;
+        font-size: 2rem;
+    }
+
+    header nav {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 24px;
+        font-size: 1.5rem;
+        height: 100%
+    }
+
+    .nav-button {
+        color: black;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: background-color 0.17s ease;
+    }
+
+    .nav-button:hover {
+        background-color: lightgray;
+    }
+
+    header nav .space {
+        width: 16px;
+        height: 100%;
+        background-color: lightgray;
+    }
+
+    /*"start" section*/
+    .start {
+        display: flex;
+        background-color: lightgrey;
+        height: auto;
+        align-items: center;
+    }
+
+    .start div {
+        width: 30%;
+    }
+
+    .start img{
+        width: 60%;
+        margin: 32px 24px;
+    }
+
+    .start h1 {
+        font-size: 3rem;
+    }
+
+    .start p {
+        font-size: 1.5rem;
+        font-weight: bold;
+
+    }
+
+    .start div a {
+        font-size: 1.5rem;
+        width: 90%;
+        height: 60px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        background-color: rgb(52, 50, 50);
+        padding: 8px 30%;
+        margin: 0 auto;
+        transition: background-color 0.2s linear;
+    }
+
+    .start div a:hover {
+        background-color: rgba(52, 50, 50, 0.464);
+    }
+
+    /*"practice" section*/
+
+    .practice {
+        display: flex;
+    }
+
+    .practice .left {
+        width: 60%;
+        margin: 32px 24px;
+    }
+
+    .practice .left #author {
+        margin-bottom: 32px;
+    }
+
+    .practice .left img {
+        width: 100%;
+    }
+
+    .practice .left h1 {
+        font-size: 3rem;
+        margin: 32px 0 24px 0;
+    }
+
+    .practice .left p {
+        font-size: 1.5rem;
+    }
+
+    .practice .right {
+        margin-top: 32px;
+        width: 40%;
+    }
+
+    .practice .right aside {
+        display: flex;
+        transition: background-color 0.17s ease;
+    }
+
+    .practice .right aside img {
+        width: 35%;
+        height: auto;
+        margin: 16px;
+    }
+
+    .practice .right aside .info {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .practice .right aside .info h2 {
+        font-size: 2rem;
+    }
+
+    .practice .right aside:hover {
+        background-color: lightgray;
+    }
+
+    .practice .right aside p {
+        margin: 8px 0 8px 0;
+        font-size: 1.3rem;
+    }
+
+    .practice .right aside a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    /*"learn" section*/
+
+    .learn {
+        background-color: lightgray;
+        padding: 32px 72px;
+    }
+
+    .learn h1 {
+        text-align: center;
+        margin-bottom: 32px;
+        font-size: 3rem;
+    }
+
+    .learn .subcjects {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        grid-gap: 32px;
+    }
+
+    .learn .subcjects .box {
+        background-color: white;
+        transition: background-color 0.2s ease;
+    }
+
+    .learn .subcjects .info {
+        margin-left: 16px;
+        margin-bottom: 24px;
+    }
+
+    .learn .subcjects .info p {
+        font-size: 1.2rem;
+        color: rgb(61, 61, 61);
+    }
+
+    .learn .subcjects .box h2 {
+        margin: 8px 0;
+    }
+
+    .learn .box img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 16px;
+    }
+
+    /*exhibit section*/
+
+    .exhibit h1 {
+        font-size: 3rem;
+        margin: 32px 0;
+        text-align: center;
+    }
+
+    .exhibit .box {
+        display: flex;
+    }
+
+    .exhibit .box .left {
+        width: 60%;
+        margin: 0 24px;
+    }
+
+    .exhibit .box video {
+        width: 100%;
+    }
+
+    .exhibit .box .left h2 {
+        font-size: 2rem;
+        margin-top: 24px;
+    }
+
+    .exhibit .box .left p {
+        font-size: 1.5rem;
+        margin: 8px 0 32px 0;
+    }
+
+    .exhibit .box .right {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .exhibit .right aside {
+        display: flex;
+        transition: background-color 0.2s ease;
+    }
+
+    .exhibit .right aside:hover {
+        background-color: lightgray;
+    }
+
+    .exhibit .right aside img {
+        width: 35%;
+        margin: 16px;
+    }
+
+    .exhibit .right aside .info {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .exhibit .right aside .info a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    .exhibit .right aside .info h2 {
+        font-size: 2rem;
+    }
+
+    .exhibit .right aside .info p {
+        font-size: 1.3rem;
+    }
+
+
+    /*footer*/
+    footer {
+        display: inline-flex;
+        width: 100%;
+        height: 64px;
+        justify-content: space-between;
+    }
+    footer p {
+        margin-left: 24px;
+        margin-top: 16px;
+    }
+
+    footer div {
+        margin-top: 16px;
+    }
 }
 
-.container {
-    position: relative;
-    top: 64px;
-}
+@media only screen and (max-width: 800px) {
+    .desktop {
+        display: none;
+    }
+    
+    header nav {
+        height: 64px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-header #logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32px;
-    margin-left: 24px;
-    font-size: 2rem;
-}
-
-header nav {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 24px;
-    font-size: 1.5rem;
-    height: 100%
-}
-
-.nav-button {
-    color: black;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 0.17s ease;
-}
-
-.nav-button:hover {
-    background-color: lightgray;
-}
-
-header nav .space {
-    width: 16px;
-    height: 100%;
-    background-color: lightgray;
-}
-
-/*"start" section*/
-.start {
-    display: flex;
-    background-color: lightgrey;
-    height: auto;
-    align-items: center;
-}
-
-.start div {
-    width: 30%;
-}
-
-.start img{
-    width: 60%;
-    margin: 32px 24px;
-}
-
-.start h1 {
-    font-size: 3rem;
-}
-
-.start p {
-    font-size: 1.5rem;
-    font-weight: bold;
-
-}
-
-.start div a {
-    font-size: 1.5rem;
-    width: 90%;
-    height: 60px;
-    text-decoration: none;
-    border-radius: 5px;
-    color: white;
-    background-color: rgb(52, 50, 50);
-    padding: 8px 30%;
-    margin: 0 auto;
-    transition: background-color 0.2s linear;
-}
-
-.start div a:hover {
-    background-color: rgba(52, 50, 50, 0.464);
-}
-
-/*"practice" section*/
-
-.practice {
-    display: flex;
-}
-
-.practice .left {
-    width: 60%;
-    margin: 32px 24px;
-}
-
-.practice .left #author {
-    margin-bottom: 32px;
-}
-
-.practice .left img {
-    width: 100%;
-}
-
-.practice .left h1 {
-    font-size: 3rem;
-    margin: 32px 0 24px 0;
-}
-
-.practice .left p {
-    font-size: 1.5rem;
-}
-
-.practice .right {
-    margin-top: 32px;
-    width: 40%;
-}
-
-.practice .right aside {
-    display: flex;
-    transition: background-color 0.17s ease;
-}
-
-.practice .right aside img {
-    width: 35%;
-    height: auto;
-    margin: 16px;
-}
-
-.practice .right aside .info {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.practice .right aside .info h2 {
-    font-size: 2rem;
-}
-
-.practice .right aside:hover {
-    background-color: lightgray;
-}
-
-.practice .right aside p {
-    margin: 8px 0 8px 0;
-    font-size: 1.3rem;
-}
-
-.practice .right aside a {
-    text-decoration: none;
-    color: blue;
-}
-
-/*"learn" section*/
-
-.learn {
-    background-color: lightgray;
-    padding: 32px 72px;
-}
-
-.learn h1 {
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: 3rem;
-}
-
-.learn .subcjects {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-    grid-gap: 32px;
-}
-
-.learn .subcjects .box {
-    background-color: white;
-    transition: background-color 0.2s ease;
-}
-
-.learn .subcjects .info {
-    margin-left: 16px;
-    margin-bottom: 24px;
-}
-
-.learn .subcjects .info p {
-    font-size: 1.2rem;
-    color: rgb(61, 61, 61);
-}
-
-.learn .subcjects .box h2 {
-    margin: 8px 0;
-}
-
-.learn .box img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 16px;
-}
-
-/*exhibit section*/
-
-.exhibit h1 {
-    font-size: 3rem;
-    margin: 32px 0;
-    text-align: center;
-}
-
-.exhibit .box {
-    display: flex;
-}
-
-.exhibit .box .left {
-    width: 60%;
-    margin: 0 24px;
-}
-
-.exhibit .box video {
-    width: 100%;
-}
-
-.exhibit .box .left h2 {
-    font-size: 2rem;
-    margin-top: 24px;
-}
-
-.exhibit .box .left p {
-    font-size: 1.5rem;
-    margin: 8px 0 32px 0;
-}
-
-.exhibit .box .right {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
-
-.exhibit .right aside {
-    display: flex;
-    transition: background-color 0.2s ease;
-}
-
-.exhibit .right aside:hover {
-    background-color: lightgray;
-}
-
-.exhibit .right aside img {
-    width: 35%;
-    margin: 16px;
-}
-
-.exhibit .right aside .info {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.exhibit .right aside .info a {
-    text-decoration: none;
-    color: blue;
-}
-
-.exhibit .right aside .info h2 {
-    font-size: 2rem;
-}
-
-.exhibit .right aside .info p {
-    font-size: 1.3rem;
-}
-
-
-/*footer*/
-footer {
-    display: inline-flex;
-    width: 100%;
-    height: 64px;
-    justify-content: space-between;
-}
-footer p {
-    margin-left: 24px;
-    margin-top: 16px;
-}
-
-footer div {
-    margin-top: 16px;
+    .start img {
+        width: 100%;
+    }
 }
