@@ -2,6 +2,23 @@ html {
     font-size: 16px;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.p-info {
+    font-size: 1rem;
+}
+
+.read-more-button {
+    color: blue;
+    text-decoration: none;
+}
+
 header {
     height: 64px;
     position: fixed;
@@ -14,6 +31,48 @@ header {
 .container {
     position: relative;
     top: 64px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+#author-info {
+    font-size: 1rem;
+}
+
+.start {
+    background-color: rgb(228, 228, 228);
+}
+
+.start .start-here a {
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    background-color: grey;
+    text-decoration: none;
+    width: 100%;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in;
+}
+
+.start .start-here a:hover {
+    background-color: rgb(171, 171, 171);
+}
+
+.learn .title {
+    border: solid black;
+}
+
+.learn .box .content {
+    visibility: hidden;
+}
+
+.learn .box .title:focus + .learn .box .content {
+    visibility: visible;
 }
 
 /*Mobile version*/
@@ -42,6 +101,41 @@ header {
     .mobile .nav-button:hover {
         background-color: gray;
         border-radius: 5px;
+    }
+
+    /*START*/
+
+    .start img {
+        width: 100%;
+    }
+
+    .start .start-here {
+        margin: 32px 16px;
+    }
+
+    .start .start-here p{
+        margin: 32px 0 24px 0;
+    }
+
+    /*PRACTICE*/
+
+    .practice aside {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .practice aside .mobile {
+        margin: 16px;
+    }
+
+    .practice aside .info {
+        margin-left: 16px;
+    }
+
+    .practice aside .info .p-info {
+        margin-top: 8px;
+        margin-bottom: 8px;
     }
 }
 
@@ -95,4 +189,81 @@ header {
         height: 64px;
     }
     
+    /*START*/
+    .start {
+        display: flex;
+
+    }
+
+    .start img {
+        width: 60%;
+        margin: 32px 24px;
+    }
+
+    .start .start-here {
+        margin-top: 32px;
+        width: 30%;
+    }
+
+    .start .start-here {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*PRACTICE*/
+    .practice, .practice aside, .right aside .info {
+        display: flex;
+    }
+
+    .left {
+        margin: 32px 24px;
+        flex-direction: column;
+        width: 60%;
+    }
+
+    .left h1 {
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+
+    #author-info {
+        margin-bottom: 32px;
+    }
+
+    .right {
+        width: 40%;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .right aside img {
+        height: auto;
+        width: 35%;
+        margin: 16px;
+    }
+
+    .right aside {
+        transition: background-color 0.2s ease-in;
+    }
+
+    .right aside:hover {
+        background-color: lightgray;
+    }
+
+    .right aside .info {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .p-info {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    /*LEARN*/
+    .learn h1 {
+        margin: 32px 0 16px 0;
+        text-align: center;
+    }
 }
