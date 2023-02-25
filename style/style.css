@@ -11,7 +11,7 @@ h2 {
 }
 
 .p-info {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .read-more-button {
@@ -41,7 +41,7 @@ p {
     font-size: 1rem;
 }
 
-.start {
+.start, .learn {
     background-color: rgb(228, 228, 228);
 }
 
@@ -61,18 +61,6 @@ p {
 
 .start .start-here a:hover {
     background-color: rgb(171, 171, 171);
-}
-
-.learn .title {
-    border: solid black;
-}
-
-.learn .box .content {
-    visibility: hidden;
-}
-
-.learn .box .title:focus + .learn .box .content {
-    visibility: visible;
 }
 
 /*Mobile version*/
@@ -136,6 +124,48 @@ p {
     .practice aside .info .p-info {
         margin-top: 8px;
         margin-bottom: 8px;
+    }
+
+    /*LEARN*/
+    .learn .box img {
+        width: 100%;
+    }
+
+    .learn h1 {
+        text-align: center;
+    }
+
+    /*EXHIBIT*/
+    .exhibit h1 {
+        margin-top: 32px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .exhibit .right {
+        display: none;
+    }
+
+    .exhibit .left video {
+        width: 100%;
+        margin-bottom: 24px;;
+    }
+
+    .exhibit .left h2 {
+        margin-bottom: 16px;
+    }
+
+    .exhibit .left p {
+        margin-bottom: 32px;
+    }
+    
+    /*FOOTER*/
+    footer div {
+        display: none;
+    }
+
+    footer p {
+        margin: 16px;
     }
 }
 
@@ -263,7 +293,97 @@ p {
 
     /*LEARN*/
     .learn h1 {
-        margin: 32px 0 16px 0;
         text-align: center;
+        padding-top: 32px;
+    }
+
+    .learn .grid {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        grid-gap: 32px;
+        padding: 32px 72px;
+    }
+
+    .learn .box {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .learn .box img {
+        height: auto;
+        width: 100%;
+    }
+    .learn .info {
+        margin-left: 16px;
+        padding-bottom: 24px;
+    }
+
+    .learn .info h2 {
+        margin-top: 16px;
+    }
+
+    /*EXHIBIT*/
+    .exhibit h1 {
+        margin: 32px;
+        text-align: center;
+    }
+
+    .exhibit .box {
+        display: flex;
+    }
+
+    .exhibit .left {
+        width: 60%;
+        margin: 0 24px 32px 24px;
+    }
+
+    .exhibit .left video {
+        width: 100%;
+    }
+
+    .exhibit .left h2 {
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+    .exhibit .left p {
+        width: 80%;
+    }
+
+    .exhibit aside {
+        display: flex;
+    }
+    
+    .exhibit .right img {
+        height: auto;
+        width: 35%;
+    }
+
+    .exhibit .info {
+        width: 65%;
+    }
+
+    .exhibit .info a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    /*FOOTER*/
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        height: 64px;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: black;
+    }
+
+    footer a:hover {
+        background-color: rgb(219, 219, 219);
+        border-radius: 5px;
     }
 }
